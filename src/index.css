@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-brand-dark text-white overflow-hidden;
+  background: radial-gradient(circle at 50% 0%, #1e1b4b 0%, #020617 60%);
+  min-height: 100vh;
+}
+
+/* Glassmorphism Utilities */
+.glass-panel {
+  @apply bg-glass-100 backdrop-blur-md border border-glass-border shadow-lg rounded-xl;
+}
+
+.glass-input {
+  @apply bg-glass-100 border border-glass-border text-white placeholder-gray-400 focus:ring-2 focus:ring-brand-blue focus:border-transparent outline-none rounded-lg transition-all duration-300;
+}
+
+.glass-btn {
+  @apply bg-gradient-to-r from-brand-blue to-brand-cyan hover:opacity-90 text-white font-semibold shadow-[0_0_15px_rgba(59,130,246,0.5)] transition-all duration-300;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
